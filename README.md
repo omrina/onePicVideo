@@ -1,2 +1,2 @@
 # onePicVideo
-Combine an mp3 with one image file to mp4
+mp3 + one image file => mp4
