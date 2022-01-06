@@ -1,7 +1,7 @@
 # onePicVideo
-mp3 + one image file => mp4
+mp3 + image => mp4
 
-You can convert multiple mp3 files to mp4 with the same image at once!
+You can also convert multiple mp3 files to mp4 with the same image at once!
 
 # Usage
 To make the magic work, first you need to install the packages listed in `requirements.txt`, like this:
