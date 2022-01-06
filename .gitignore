@@ -1,7 +1,7 @@
 ./.idea
-./final_videos/*
-./music files/*
-./Pic.jpeg
+final_videos/*
+music files/*
+Pic.jpeg
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -133,3 +133,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 /.idea/workspace.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/onePicVideo.iml
+/.idea/vcs.xml
