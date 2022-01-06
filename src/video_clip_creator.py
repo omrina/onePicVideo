@@ -1,5 +1,5 @@
 from os import listdir
-from os.path import isfile, join, basename
+from os.path import isfile, join, abspath, basename, splitext
 from configs import video_fps, output_folder_path
 from moviepy.editor import *
 
@@ -17,7 +17,7 @@ def get_audio_file_paths(music_folder_path):
 
 
 def create_video(audio_path, image_path):
-    audio_name = basename(image_path)
+    audio_name = basename(audio_path)
 
     video_clip = build_video_clip(audio_path, image_path)
     video_clip.write_videofile(create_video_name(audio_name), fps=video_fps)
@@ -34,4 +34,4 @@ def build_video_clip(audio_path, image_path):
     
 
 def create_video_name(name):
-    return os.path.join(os.getcwd(), output_folder_path, name[:-4] + ".mp4")
+    return abspath(join(output_folder_path, splitext(name)[0] + ".mp4"))

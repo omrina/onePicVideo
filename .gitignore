@@ -1,4 +1,7 @@
-.idea
+./.idea
+./final_videos/*
+./music files/*
+./Pic.jpeg
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
