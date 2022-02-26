@@ -1,19 +1,29 @@
 from os import listdir
 from os.path import isfile, join, abspath, basename, splitext
-from configs import video_fps, output_folder_path
+from configs import is_single_image, video_fps, output_folder_path
 from moviepy.editor import *
 
 
-def create_videos(music_folder_path, image_path):
-    audio_file_paths = get_audio_file_paths(music_folder_path)
+def create_videos(music_folder_path, images_folder_path):
+    audio_to_image_paths = get_image_to_audio_paths(music_folder_path, images_folder_path)
 
-    for audio_path in audio_file_paths:
+    for audio_path, image_path in audio_to_image_paths:
         create_video(audio_path, image_path)
 
 
-def get_audio_file_paths(music_folder_path):
-    return [join(music_folder_path, file) for file in listdir(music_folder_path) if
-            isfile(join(music_folder_path, file))]
+def get_image_to_audio_paths(music_folder_path, images_folder_path):
+    audio_file_paths = get_folder_file_paths(music_folder_path)
+    images_file_paths = get_folder_file_paths(images_folder_path)
+
+    if is_single_image:
+        images_file_paths = [images_file_paths[0] for _ in range(len(audio_file_paths))]
+
+    return zip(sorted(audio_file_paths), sorted(images_file_paths))
+
+
+def get_folder_file_paths(folder_path):
+    return [join(folder_path, file) for file in listdir(folder_path) if
+            isfile(join(folder_path, file))]
 
 
 def create_video(audio_path, image_path):

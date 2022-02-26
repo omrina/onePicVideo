@@ -1,7 +1,8 @@
 ./.idea
 final_videos/*
 music files/*
-Pic.jpeg
+images/*
+*.mp3
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
