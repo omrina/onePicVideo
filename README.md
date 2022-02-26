@@ -20,4 +20,4 @@ Be patient as the mp4 creation make take some time.
 
 
 # Imporant Notes
-Sometimes a video won't work (neither the audio or the image). To resolve this try an image greater than 500x500.
+* Sometimes a video won't work (neither the audio or the image). To resolve this try an image greater than 500x500.
